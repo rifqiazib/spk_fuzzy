@@ -273,18 +273,13 @@
                       <div class="relative">
                       <select class="block appearance-none w-full text-center bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="sub_input_{{ $subcriteria->criteria_id }}[]">
                           <option value="1">1</option>
-                          <option value="2">2</option>
                           <option value="3">3</option>
-                          <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
                           <option value="7">7</option>
-                          <option value="8">8</option>
                           <option value="9">9</option>
                         </select>
                         <div class="absolute top-4 right-3">
-                          
-                        </div>
+                    </div>
                       </div>
                     </td>
                     @else
