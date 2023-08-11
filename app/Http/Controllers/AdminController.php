@@ -68,14 +68,20 @@ class AdminController extends Controller
 
     public function edituser($id) {
         $data_user = User::find($id);
-        $data_role = UserRole::find($id);
+        $data_role = Role::all();
+        
         return view('user.edituser', ['user' => $data_user,'roles' => $data_role]);
     }
 
     public function updateuser(Request $request, $id){
         $data_user = User::find($id);
-        $data_user -> update($request->all());
-      
+        // return $request->all();
+        $data_user->update([
+            "name"=> $request->name,
+            "email"=> $request->email,
+            "password"=> bcrypt($request->password)
+        ]);
+        
         $request->session()->flash('editsukses', 'Data User Berhasil Diubah');
         return redirect('/userdata');
     }

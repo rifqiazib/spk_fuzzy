@@ -144,7 +144,8 @@
 
                         </div>
                     </div>
-
+                    <div class="content" style="
+                     margin-left: 3rem;">
                     <div class="content">
       <div class="card card-primary">
               <div class="card-header">

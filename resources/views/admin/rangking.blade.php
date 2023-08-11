@@ -222,13 +222,9 @@
                       <div class="relative">
                         <select class="block appearance-none w-full text-center bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" name="input[]">
                           <option value="1">1</option>
-                          <option value="2">2</option>
                           <option value="3">3</option>
-                          <option value="4">4</option>
                           <option value="5">5</option>
-                          <option value="6">6</option>
                           <option value="7">7</option>
-                          <option value="8">8</option>
                           <option value="9">9</option>
                           
                         </select>
@@ -322,14 +318,14 @@
                       </tr>
                       @empty
                       <tr>
-                        <td colspan="2" class="text-center border px-8 py-4">Belum ada data, <a href="{{ route('alternatives.index') }}" class="text-blue-400 hover:underline">isi data dahulu</a></td>
+                        <td colspan="2" class="text-center border px-8 py-4">Belum ada data, <a href="{{ route('candidate') }}" class="text-blue-400 hover:underline">isi data dahulu</a></td>
                       </tr>
                     @endforelse
                   </tbody>
                 </table>
               </div>
 
-              @if($criterias->isNotEmpty() && $alternatives->isNotEmpty())
+              @if($criterias->isNotEmpty() && $candidates->isNotEmpty())
               
 
   

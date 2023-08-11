@@ -144,34 +144,35 @@
 
                         </div>
                     </div>
-
+                    <div class="content" style="
+                     margin-left: 3rem;">
                     <div class="content">
       <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Register a new user</h3>
+                <h3 class="card-title">Edit a new user</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
-              <form action="\admin\{{$user->id}}\updateuser)" method="post">
+              <form action="{{route('user.update', $user->id)}}" method="post">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="inputname"></label>
-                    <input name="name" id="inputname" class ="form-control" placeholder="Name" rows="4">{{ $user->name}}</input>
+                    <input name="name" id="inputname" class ="form-control" placeholder="" rows="4" value="{{ $user->name}}" />
                   </div>
                   <div class="form-group">
                     <label for="email"></label>
-                    <input type="email" name="email" class="form-control"  placeholder="Email">{{ $user->email}} </input>
+                    <input type="email" name="email" class="form-control"  placeholder="Email" value="{{ $user->email}} "/> 
                   </div>
                   <div class="form-group">
                     <label for="password"></label>
-                    <input type="password" name="password" class="form-control"  placeholder="Password"></input>
+                    <input type="password" name="password" class="form-control"  placeholder="Password" />
                   </div>
                   <div class="form-group">
                     <label for="role">Pilih Role</label>
                     <select class="form-control" id="role" name="role">
                     @foreach ($roles as $role)
-                    <option value="{{ $role -> id }}">{{ $role -> name}}</option>
+                    <option value="{{ $role -> id }}" {{ $role->id == $user->roles[0]->id ? "selected" : ""}}>{{ $role -> name}}</option>
                     @endforeach
                     </select>
                     

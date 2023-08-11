@@ -146,7 +146,7 @@
                     </div>
 
                     <div class="content" style="
-    margin-left: 3rem;">
+                     margin-left: 3rem;">
       <div class="card card-primary">
               <div class="card-header">
                 <h3 class="card-title">Tambah Sub Criteria</h3>
