@@ -181,7 +181,7 @@
                   <div class="form-group">
                   <label for="validationCustom01" class="form-label">Tabungan</label>
                     <label for="tabungan"></label>
-                    <input type="number" name="tabungan" class="form-control"  placeholder="tabungan">
+                    <input type="text" name="tabungan" class="form-control"  placeholder="tabungan">
                   </div>
                   <div class="form-group">
                   <label for="validationCustom01" class="form-label">Jumlah Kepala Keluarga</label>
