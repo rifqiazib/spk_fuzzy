@@ -28,40 +28,41 @@ class RangkingController extends Controller
     {
         $tfnSkala = [
             (object)[
-                "tria" => [1, 1, 1],
+                "tria" => [1, 1, 1], // 1
                 "reci" => [1, 1, 1]
             ],
             (object)[
-                "tria" => [0.5, 1, 1.5],
+                "tria" => [0.5, 1, 1.5], //1 diagonal
                 "reci" => [0.666, 1, 2]
             ],
             (object)[
-                "tria" => [1, 1.5, 2],
+                "tria" => [1, 1.5, 2], // 3
                 "reci" => [0.5, 0.666, 1]
             ],
             (object)[
-                "tria" => [1.5, 2, 2.5],
-                "reci" => [0.4, 0.5, 0.666]
-            ],
-            (object)[
-                "tria" => [2, 2.5, 3],
-                "reci" => [0.333, 0.4, 0.5]
-            ],
-            (object)[
-                "tria" => [2.5, 3, 3.5],
-                "reci" => [0.285, 0.333, 0.4]
-            ],
-            (object)[
-                "tria" => [3, 3.5, 4],
+                "tria" => [3, 3.5, 4], // 7 
                 "reci" => [0.25, 0.285, 0.333]
+            ],
+            (object)[
+                "tria" => [1.5, 2, 2.5], // 5
+                "reci" => [0.4, 0.5, 0.666]
+              
+            ],
+            (object)[
+                "tria" => [4, 4.5, 4.5], // 9 lama
+                "reci" => [0.5, 0.222, 0.25]
+            ],
+            (object)[
+                "tria" => [2, 2.5, 3], // 7
+                "reci" => [0.333, 0.4, 0.5]
             ],
             (object)[
                 "tria" => [3.5, 4, 4.5],
                 "reci" => [0.222, 0.25, 0.285]
             ],
             (object)[
-                "tria" => [4, 4.5, 4.5],
-                "reci" => [0.5, 0.222, 0.25]
+                "tria" => [2.5, 3, 3.5], // 9 new
+                "reci" => [0.285, 0.333, 0.4]
             ]
         ];
         $inputCriteria = array_map('intval', $request->input);
@@ -71,14 +72,15 @@ class RangkingController extends Controller
         $data['criterias'] = Criteria::all();
         $data['inputCriterias'] = array_chunk($inputCriteria, count($data['criterias']));
         // return $tfnSkala[0];
-        // return $data['inputCriterias'];
+        //  return $data['inputCriterias'];
         $lmuArray = [];
         foreach($data['inputCriterias'] as $indexInput => $sub) {
             
             foreach($sub as $indexSub => $item) {
+                
                 if ($item == 0) {
                     $lmuArray[] = $tfnSkala[$data['inputCriterias'][$indexSub][$indexInput] - 1]->reci;
-                } else {
+                }else {
                     $lmuArray[] = $tfnSkala[$item - 1]->tria;
                 }
             }

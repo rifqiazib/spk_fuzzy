@@ -181,7 +181,15 @@
                   <div class="form-group">
                   <label for="validationCustom01" class="form-label">Tabungan</label>
                     <label for="tabungan"></label>
-                    <input  name="tabungan" value="{{$candidates->tabungan}}" class="form-control"  placeholder="tabungan">
+                   
+                    <select class="form-control" name="tabungan" value="{{$candidates->tabungan}}">
+                          <option value="tidak mempunyai">tidak mempunyai</option>
+                          <option value="alat elektronik">alat elektronik</option>
+                          <option value="sepeda motor">sepeda motor</option>
+                          <option value="sepeda motor dan alat elektronik">sepeda motor dan alat elektronik</option>
+                          <option value="mobil">mobil</option>
+                    </select>
+                   
                   </div>
                   <div class="form-group">
                   <label for="validationCustom01" class="form-label">Jumlah Kepala Keluarga</label>
