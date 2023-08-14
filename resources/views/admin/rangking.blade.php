@@ -226,7 +226,7 @@
                           <option value="5">5</option>
                           <option value="7">7</option>
                           <option value="9">9</option>
-                          <option value="-3">-3</option>
+                         
                           
                         </select>
                         
@@ -274,6 +274,7 @@
                           <option value="5">5</option>
                           <option value="7">7</option>
                           <option value="9">9</option>
+                        
                           
                         </select>
                         <div class="absolute top-4 right-3">
